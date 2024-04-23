@@ -14,7 +14,4 @@ async def async_comprehension() -> typing.List[float]:
     """
     coroutine return random int
     """
-    result = []
-    async for i in async_generator():
-        result.append(i)
-    return result
+    return [i async for i in async_generator()]
